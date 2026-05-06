@@ -13,7 +13,7 @@ helperFunctions: Reusable functions used by GenerateFigures/ to create specific 
 SourceData: All processed data required for figure reproduction. The associated raw neural and behavioral data can be made available upon request.
 
 ### Requirements:
-MATLAB (tested on 2024b) 
+MATLAB (tested on 2024b) \
 Toolboxes: Statistics and Machine Learning Toolbox
 
 ### Contact:
