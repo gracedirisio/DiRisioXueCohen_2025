@@ -61,7 +61,6 @@ for i = 1:numel(groups)
     line([x, x], [q3, whisker_high], 'Color', col, 'LineWidth', 1.8);
     line([x, x], [q1, whisker_low],  'Color', col, 'LineWidth', 1.8);
 
-    % Whisker caps
     line([x - whiskerCap, x + whiskerCap], [whisker_high, whisker_high], ...
          'Color', col, 'LineWidth', 1.8);
     line([x - whiskerCap, x + whiskerCap], [whisker_low,  whisker_low],  ...

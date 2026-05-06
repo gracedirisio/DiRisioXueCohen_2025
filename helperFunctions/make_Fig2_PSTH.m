@@ -8,7 +8,7 @@ function [] = make_Fig2_PSTH(subFig, data1, data2)
 %     row 1 = mean firing rate across 17 time bins
 %     row 2 = SEM (error bar)
 %     col 1 = baseline (plotted at x = 0)
-%     col 2:17 = time bins corrresponding to number of fragments revealled (plotted at x = 1:16)
+%     col 2:17 = time bins corrresponding to number of fragments revealed (plotted at x = 1:16)
 %
 %   Usage:
 %     make_Fig2_PSTH('F', AllData.data_2F)
@@ -22,7 +22,7 @@ end
 % Colors
 green  = [0.4660, 0.6740, 0.1880];
 orange = [245/256, 132/256,  38/256];   % Knicks orange
-blue   = [0,       107/256, 182/256];
+blue   = [0,107/256, 182/256];
 black  = [0, 0, 0];
 
 switch upper(subFig)
@@ -42,9 +42,7 @@ switch upper(subFig)
 
     %%%%%%% Subplot G: two panels %%%%%%
     case 'G'
-        % Left panel  (data1): SData_Correct (green), SData_Co1Co2 (green --)
-        % Right panel (data2): SData_Correct (green), SData_Co1E2  (black --)
-        %
+        
         fieldStylesLeft = struct( ...
             'SData_Correct', {{green, '-',  'Correct'}}, ...
             'SData_Co1Co2',  {{green, '--', 'Co1Co2'}});
@@ -142,9 +140,7 @@ function [legStr, nBins] = plotStructStyled(ax, ds, styles)
 end
 
 
-% =========================================================================
-%  plotStruct: generic version using positional color/style lists
-% =========================================================================
+%%  plotStruct: use  color/style lists
 function [legStr, nBins] = plotStruct(ax, ds, colorList, ltList, legLabels)
     fields = fieldnames(ds);
     nBins  = [];
@@ -179,9 +175,7 @@ function [legStr, nBins] = plotStruct(ax, ds, colorList, ltList, legLabels)
 end
 
 
-% =========================================================================
-%  finishAxes: shared axis styling
-% =========================================================================
+%%  finishAxes: shared axis styling
 function finishAxes(ax, titleStr, legStr, nBins)
     
     xlabel(ax, 'Time bin');
