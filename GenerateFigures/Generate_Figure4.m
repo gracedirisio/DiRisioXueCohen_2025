@@ -22,8 +22,7 @@ AllData.a=load([dataPath, 'data_4a']);
 AllData.b=load([dataPath, 'data_4b']);
 
 %4c
-AllData.c_monkZ=load([dataPath, 'data_4c_Z']);
-AllData.c_monkH=load([dataPath, 'data_4c_H']);
+AllData.c=load([dataPath, 'AcrossSession']);
 
 %% make plots 
 
@@ -31,4 +30,4 @@ make_Fig4a(AllData.a.data);
 
 make_Fig4b(AllData.b.data);
 
-[stats]=make_Fig4c(AllData.c_monkZ.data,AllData.c_monkH.data);
+[stats]=make_Fig4c(AllData.c.data);
