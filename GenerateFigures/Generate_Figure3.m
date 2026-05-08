@@ -10,34 +10,37 @@
 % 3e relationship of repetition suppression to performance
 
 %% load data %%
-dataPath=['/Volumes/Colada/Grace/Code/ForSubmission/NatueComm_2025/SourceData/'];
+% All paths are relative to this script
 
+repoRoot = fileparts(fileparts(mfilename('fullpath')));
+ 
+addpath(genpath(fullfile(repoRoot, 'helperFunctions')));
+dataPath = fullfile(repoRoot, 'SourceData', 'Fig3', filesep);
 % for 3a and c (single session)
-AllData.SingleSess_a=load([dataPath, 'Fig3/', 'data_3a']);
-% AllData.SingleSess_c=load([dataPath, 'Fig3/', 'data_']);
+AllData.SingleSess_a=load([dataPath, 'data_3a']);
+AllData.SingleSess_c=load([dataPath,  'data_3c']);
 
 % for 3b and d (across session)
-%source file in
-%smb://128.135.198.39/Colada/Grace/MyPapers/PopCorrData/RepSupp/Figure1b/
-
-% %RSI 3b: but is not differentiating by monkey and low nbacks look weird
-% load('/Volumes/Colada/Grace/MyPapers/PopCorrData/RepSupp/Figure1b/sessionRSI_correct.mat')
-% load('/Volumes/Colada/Grace/MyPapers/PopCorrData/RepSupp/Figure1b/sessionRSI_error.mat')
-% load('/Volumes/Colada/Grace/MyPapers/PopCorrData/RepSupp/Figure1b/sessionRSI_correctlow.mat')
-% load('/Volumes/Colada/Grace/MyPapers/PopCorrData/RepSupp/Figure1b/sessionRSI_errorlow.mat')
-% load('/Volumes/Colada/Grace/MyPapers/PopCorrData/RepSupp/Figure1b/sessionRSI_correcthi.mat')
-% load('/Volumes/Colada/Grace/MyPapers/PopCorrData/RepSupp/Figure1b/sessionRSI_errorhi.mat')
-
+AllData.AcrossSess_3=load([dataPath,  'data_3b']);
+AllData.AcrossSess_3d_H=load([dataPath,  'helium_3d']);
+AllData.AcrossSess_3d_Z=load([dataPath,  'zippy_3d']);
 
 % for 3e (relationship of RS to performance)
 %source data saved out and good to go
-AllData.SingleSess_a=load([dataPath, 'Fig3/', 'data_3e_monkH']);
-AllData.SingleSess_a=load([dataPath, 'Fig3/', 'data_3e_monkZ']);
+AllData.AcrossSess_Behavior_H_low=load([dataPath, 'data_3e_monkH_low']);
+AllData.AcrossSess_Behavior_H_high=load([dataPath, 'data_3e_monkH_high']);
+AllData.AcrossSess_Behavior_Z_low=load([dataPath, 'data_3e_monkZ_low']);
+AllData.AcrossSess_Behavior_Z_high=load([dataPath, 'data_3e_monkZ_high']);
 
 %% plots %%
 % single session (3a and 3c)
 make_Fig3_singlesession(AllData.SingleSess_a.data) %panel 3a
-% make_Fig3_singlesession(AllData.SingleSess_c) %panel 3c
+make_Fig3_singlesession(AllData.SingleSess_c.data) %panel 3c
+
 % across session (3b and 3d)
+make_Fig3_AcrossSession(AllData.AcrossSess_3) %panel 3c
+make_Fig3_AcrossSession(AllData.AcrossSess_3d_H, AllData.AcrossSess_3d_Z) %panel 3c
 
 % relationship to behavior (3e)
+make_Fig3_5_behavior(AllData.AcrossSess_Behavior_H_low.data, AllData.AcrossSess_Behavior_H_high.data) %panel 3e
+make_Fig3_5_behavior(AllData.AcrossSess_Behavior_Z_low.data, AllData.AcrossSess_Behavior_Z_high.data) %panel 3e
