@@ -22,15 +22,15 @@ if nback_plot==0
     xlabel('Error')
     xline(0)
     yline(0)
-    xticks(-.1:0.1:.2);
-    yticks(-.1:0.1:.2);
-    xlim([amin,amax])
-    ylim([amin,amax])
+    xticks(-.2:0.1:.3);
+    yticks(-.2:0.1:.3);
+    xlim([-.1,.2])
+    xlim([-.1,.2])
+
     axis square
     box off
     hold off
 
-    [p, ~] = signrank(RSI_correct, RSI_error);
 
 else
     x=1;
@@ -43,16 +43,14 @@ else
     xlabel('Error')
     xline(0)
     yline(0)
-    xticks(-.4:0.1:.4);
-    yticks(-.4:0.1:.4);
-    xlim([-.6,.4])
-    ylim([-.6,.4])
+    xticks(-.2:0.1:.3);
+    yticks(-.2:0.1:.3);
+    xlim([-.2,.3])
+    ylim([-.2,.3])
+
     axis square
     box off
     hold off
-
-    [p_corr_low, ~] = signrank(data.low_Correct, data.low_error);
-    [p_corr_hi, ~] = signrank(data.high_Correct, data.high_error);
    
     
 

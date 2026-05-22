@@ -17,9 +17,9 @@ if nback
     plot(data1.data.Error_H,data1.data.Correct_H,'o','MarkerFaceColor',blue,'MarkerEdgeColor','w')
     plot(data2.data.Error_H,data2.data.Correct_H,'^','MarkerFaceColor',blue,'MarkerEdgeColor','w')
 
-    plot([-.3 .3], [-.3 .3], '-', 'Color', [.7 .7 .7], 'LineWidth', 3)
+    plot([-.3 .5], [-.3 .5], '-', 'Color', [.7 .7 .7], 'LineWidth', 3)
     xline(0); yline(0)
-    xlim([-.3 .3]); ylim([-.3 .3])
+    xlim([-.3 .5]); ylim([-.3 .5])
     xlabel('median rsi, error '); ylabel('median rsi, correct')
     title('3d: Across session summary, split by nback')
     axis square; box off
@@ -36,8 +36,8 @@ if nback
 
 else
     figure; hold on;
-    plot(data1.data.Z_error,data1.data.Z_Correct,'k^')
-    plot(data1.data.H_error,data1.data.H_Correct,'ko')
+    plot(data1.data.Z_error,data1.data.Z_Correct,'k^','MarkerFaceColor','k')
+    plot(data1.data.H_error,data1.data.H_Correct,'ko','MarkerFaceColor','k')
     plot([-.2 .2], [-.2 .2], '-', 'Color', [.7 .7 .7], 'LineWidth', 3)
     xline(0); yline(0)
     xlim([-.2 .2]); ylim([-.2 .2])
