@@ -10,10 +10,10 @@ xlim([0 1])
 ylim([0 1])
 refline(1,0)
 title('5e, split by nback')
-xlabel('Median population correlation, error')
-ylabel('Median population correlation, error')
+xlabel('mean population correlation, error')
+ylabel('mean population correlation, correct')
 
-[h,p_both] = ttest([data.H_AllCorrect;data.Z_AllCorrect], [data.H_AllError;data.Z_AllError ],'Tail','right');
+% [h,p_both] = ttest([data.H_AllCorrect;data.Z_AllCorrect], [data.H_AllError;data.Z_AllError ],'Tail','right');
 
 
 figure; hold on;
@@ -23,11 +23,11 @@ plot(data.H_error_high ,data.H_Correct_high,'o','MarkerFaceColor',high_color,'Ma
 plot(data.Z_error_high ,data.Z_Correct_high,'^','MarkerFaceColor',high_color,'MarkerEdgeColor',high_color,'MarkerSize',10)
 refline(1,0)
 title('5e, split by nback')
-xlabel('Median population correlation, error')
-ylabel('Median population correlation, error')
+xlabel('mean population correlation, error')
+ylabel('mean population correlation, correct')
 
-[h,p_low]=ttest([data.H_Correct_low;data.Z_Correct_low],[data.H_error_low;data.Z_error_low],'Tail','right');
-[h,p_high]=ttest([data.H_Correct_high;data.Z_Correct_high],[data.H_error_high;data.Z_error_high],'Tail','right');
+% [h,p_low]=ttest([data.H_Correct_low;data.Z_Correct_low],[data.H_error_low;data.Z_error_low],'Tail','right');
+% [h,p_high]=ttest([data.H_Correct_high;data.Z_Correct_high],[data.H_error_high;data.Z_error_high],'Tail','right');
 
 
 end

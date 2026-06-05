@@ -38,7 +38,7 @@ make_Fig3_singlesession(AllData.SingleSess_a.data) %panel 3a
 make_Fig3_singlesession(AllData.SingleSess_c.data) %panel 3c
 
 % across session (3b and 3d)
-make_Fig3_AcrossSession(AllData.AcrossSess_3) %panel 3c
+make_Fig3_AcrossSession(AllData.AcrossSess_3) %panel 3b
 make_Fig3_AcrossSession(AllData.AcrossSess_3d_H, AllData.AcrossSess_3d_Z) %panel 3c
 
 % relationship to behavior (3e)

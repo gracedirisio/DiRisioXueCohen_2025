@@ -3,7 +3,7 @@ function[p_firing]=make_Fig4c(data)
 
 
 figure; hold on
-plot(data.Error,data.Correct,'x','MarkerFaceColor', 'k', 'MarkerEdgeColor', 'k', ...
+plot(data.Error,data.Correct,'d','MarkerFaceColor', 'k', 'MarkerEdgeColor', 'k', ...
         'MarkerSize', 10);
 
 % Plot formatting
