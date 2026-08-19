@@ -17,4 +17,4 @@ MATLAB (tested on 2024b) \
 Toolboxes: Statistics and Machine Learning Toolbox
 
 ### Contact:
-For questions or issues, please reach out to gracedirisio@gmail.com
+For questions or issues, please reach out to gdirisio@uchicago.edu
