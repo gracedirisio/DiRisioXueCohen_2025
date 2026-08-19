@@ -92,9 +92,7 @@ for mIdx = 1:numel(measures)
         end
 
         set(gca,'linewidth',5)
-        if exist('marleneaxes','file')
-            marleneaxes
-        end
+
         axis square
 
         xlabel('proportion correct')
