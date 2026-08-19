@@ -12,6 +12,12 @@ helperFunctions: Reusable functions used by GenerateFigures/ to create specific 
 
 SourceData: All processed data required for figure reproduction. The associated raw neural and behavioral data can be made available upon request.
 
+Update 08.2026: Adding data and code to recreate supplementary figures
+### Supplementary Figures Directory Information:
+GenerateFigures: Start point to generate each figure from the paper. Each script corresponds to a supplementary figure. Running this will load the required data (found in SourceData).
+
+SourceData: All processed data required for figure reproduction. 
+
 ### Requirements:
 MATLAB (tested on 2024b) \
 Toolboxes: Statistics and Machine Learning Toolbox
