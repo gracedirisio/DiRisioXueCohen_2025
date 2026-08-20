@@ -99,7 +99,7 @@ for mIdx = 1:numel(measures)
         ylabel(meas)
         title([monkLetter ' - ' meas])
 
-        % --- axis limits matching original script ---
+        %  axis limits 
         if strcmp(meas,'RepSup')
             xlim([.5 1])
             if monknum == 2
