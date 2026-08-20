@@ -20,7 +20,7 @@ SourceData: All processed data required for figure reproduction.
 
 ### Requirements:
 MATLAB (tested on 2024b) \
-Toolboxes: Statistics and Machine Learning Toolbox
+Toolboxes: Statistics and Machine Learning Toolbox, Image Processing Toolbox
 
 ### Contact:
 For questions or issues, please reach out to gdirisio@uchicago.edu
