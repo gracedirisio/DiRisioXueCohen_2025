@@ -97,7 +97,7 @@ for i=1:numel(mnames)
 
 end
 
-[a,b]=ranksum(combined_low,combined_high);
+[a,b,c]=ranksum(combined_low,combined_high);
 disp(['ranksum:' num2str(a)])
 
 xlim([0 .1])

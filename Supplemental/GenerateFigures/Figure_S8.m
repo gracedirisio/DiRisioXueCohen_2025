@@ -140,8 +140,7 @@ for m=1:2
     title([monkeyname ' - main effects'], 'Interpreter', 'none');
     box off;
     hold off;
-    output=['/Volumes/Colada/Grace/MyPapers/Figs_svg/Supplement/GLM/'];
-    % saveas(gcf,[output,'GLM_mainEffects_monk', num2str(m)], 'svg');
+
 
     %% --- Figure 2: Interaction heatmap ---
     intIdx = find(isInteraction);
