@@ -13,10 +13,6 @@ low_SE_y=low_data.SE_y;
 high_SE_y=high_data.SE_y;
 
 
-low_LineFit_x=low_data.x_fit;
-high_LineFit_x=high_data.x_fit;
-low_LineFit_y=low_data.y_fit;
-high_LineFit_y=high_data.y_fit;
 
 measure=low_data.measure; %should be same for low and high
 monkeyName=low_data.monk; %should be same for low and high
@@ -43,9 +39,9 @@ for n = 1:numel(low_x)
     plot([low_x(n), low_x(n)], [low_y(n) - low_SE_y(n), low_y(n) + low_SE_y(n)], '-', 'color', low_color, 'LineWidth', 1);
 end
 
-%plot fit
-plot(low_LineFit_x, low_LineFit_y, '-', 'Color', low_color, 'LineWidth', 5)
-        set(gca,'linewidth',2);
+% %plot fit
+% plot(low_LineFit_x, low_LineFit_y, '-', 'Color', low_color, 'LineWidth', 5)
+%         set(gca,'linewidth',2);
 
 %% high nback 
 plot(high_x, high_y, 'k', 'Marker', symbol, 'markerfacecolor', high_color, ...
@@ -59,8 +55,8 @@ end
 
 
 
-plot(high_LineFit_x, high_LineFit_y, '-', 'Color', high_color, 'LineWidth', 5)
-        set(gca,'linewidth',2);
+% plot(high_LineFit_x, high_LineFit_y, '-', 'Color', high_color, 'LineWidth', 5)
+%         set(gca,'linewidth',2);
 if measure(1)=='R'
     %rep supp (figure 3)
     plot([.5 1],zeros(1,2),'-','LineWidth',3,'Color',[.7 .7 .7])
