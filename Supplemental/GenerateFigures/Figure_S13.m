@@ -47,4 +47,44 @@ refline(1,0)
 xline(0)
 yline(0)
 
-%% Resp
+%% Response consistency panel
+
+% ConsistencyData
+error_low_He=ConsistencyData.data.H_error_low;
+error_high_He=ConsistencyData.data.H_error_high;
+correct_high_He=ConsistencyData.data.H_Correct_high;
+correct_low_He=ConsistencyData.data.H_Correct_low;
+
+error_low_Z=ConsistencyData.data.Z_error_low;
+error_high_Z=ConsistencyData.data.Z_error_high;
+correct_high_Z=ConsistencyData.data.Z_Correct_high;
+correct_low_Z=ConsistencyData.data.Z_Correct_low;
+
+
+figure; hold on;
+%Zippy data
+plot(error_low_Z,correct_low_Z,'^','MarkerFaceColor',orange, 'MarkerEdgeColor','w','MarkerSize',12)
+plot(error_high_Z,correct_high_Z,'^','MarkerFaceColor',blue, 'MarkerEdgeColor','w','MarkerSize',12)
+%helium data
+plot(error_low_He,correct_low_He,'o','MarkerFaceColor',orange, 'MarkerEdgeColor','w','MarkerSize',12)
+plot(error_high_He,correct_high_He,'o','MarkerFaceColor',blue, 'MarkerEdgeColor','w','MarkerSize',12)
+%format
+axis square
+refline(1,0)
+
+% stats
+
+% [p_low, h_low] = ttest(correct_low_He, error_low_He,'tail','right');
+% [p_high, h_h] = ttest(correct_high_He, error_high_He,'tail','right');
+% 
+% 
+% [p_low, h_low] = ttest(correct_low_Z,error_low_Z,'tail','right');
+% [p_high, h_h] = ttest(correct_high_Z,error_high_Z, 'tail','right');
+
+
+
+
+[p_low, h_low] = ttest([correct_low_Z; correct_low_He],[error_low_Z;error_low_He],'tail','right');
+[p_h, h_h] = ttest([correct_high_Z; correct_high_He],[error_high_Z;error_high_He],'tail','right');
+
+

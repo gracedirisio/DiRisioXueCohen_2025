@@ -30,11 +30,11 @@ fill([lags fliplr(lags)], ...
 %random sequence
 fill([lags fliplr(lags)], ...
      [mean_lag_rand + sem_lag_rand; flipud(mean_lag_rand - sem_lag_rand)]', ...
-     c_rand, 'FaceAlpha', 0.2, 'EdgeColor', 'none');
+     c, 'FaceAlpha', 0.2, 'EdgeColor', 'none');
 
 % Mean lines
 plot(lags, mean_lag_stereo, '-', 'Color', c_stereo, 'LineWidth', 2);
-plot(lags, mean_lag_rand, '-', 'Color', c_rand, 'LineWidth', 2);
+plot(lags, mean_lag_rand, '-', 'Color', c, 'LineWidth', 2);
 
 legend('same sequence', 'random sequence');
 xline(0)
